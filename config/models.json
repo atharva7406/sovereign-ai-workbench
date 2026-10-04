@@ -1,0 +1,32 @@
+{
+  "default_provider": "ollama",
+  "providers": {
+    "ollama": {
+      "base_url": "http://localhost:11434",
+      "timeout_seconds": 60.0
+    }
+  },
+  "models": {
+    "gemma3:latest": {
+      "display_name": "Gemma 3 (Latest)",
+      "provider": "ollama",
+      "capabilities": ["text", "multimodal"],
+      "context_window": 131072,
+      "description": "Google Gemma 3 open-weight model with multimodal capabilities"
+    },
+    "qwen3:8b": {
+      "display_name": "Qwen 3 8B",
+      "provider": "ollama",
+      "capabilities": ["text", "tools", "thinking"],
+      "context_window": 40960,
+      "description": "Qwen 3 8B reasoning and tool-capable model"
+    },
+    "aya-expanse:8b": {
+      "display_name": "Aya Expanse 8B",
+      "provider": "ollama",
+      "capabilities": ["text", "multilingual"],
+      "context_window": 8192,
+      "description": "Cohere Aya Expanse multilingual model"
+    }
+  }
+}
